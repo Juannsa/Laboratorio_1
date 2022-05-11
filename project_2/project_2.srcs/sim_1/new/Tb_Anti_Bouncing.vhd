@@ -65,9 +65,9 @@ BEGIN
    Clock_process :process
    begin
         clk <= '0';
-        wait for Clock_period/2;
+        wait for Clock_period;
         clk <= '1';
-        wait for Clock_period/2;
+        wait for Clock_period;
    end process;
  
 
