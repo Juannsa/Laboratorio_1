@@ -62,7 +62,7 @@ constant feedback_equation: feedback_array_type:=
                           
  
 signal width: natural:=4;
-signal initial_value : std_logic_vector((width - 1) downto 0);                      
+signal initial_value : std_logic_vector(width - 1 downto 0);                      
 signal sel_i: std_logic_vector(1 downto 0);
 signal q_lfsr_i: std_logic_vector(width -1 downto 0);
 signal serial_in: std_logic;
@@ -106,7 +106,7 @@ end process shift;
   MW_p:process(sel)
        begin 
        MW:case sel_i is
-               when "00" => width <= 4; initial_value <= i_value4;
+               when "00" => width <= 4; initial_value <= i_value4; constant widthh <=4;
                when "01" => width <= 8; initial_value <= i_value8;
                when "10" => width <= 16; initial_value <= i_value16;
                when "11" => width <= 32; initial_value <= i_value32;
